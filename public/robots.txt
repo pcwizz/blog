@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://pcwizz.net/sitemap.xml

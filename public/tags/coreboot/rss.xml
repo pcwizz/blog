@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Pcwizz&#x27;s blog</title>
+        <link>https%3A//pcwizz.net</link>
+        <description>Nerd by the name of Pcwizz writes about DevOps, politics, and Free Software.</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https%3A//pcwizz.net/tags/coreboot/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 17 Mar 2016 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>Librem 13 first impressions</title>
+                <pubDate>Thu, 17 Mar 2016 00:00:00 +0000</pubDate>
+                <link>https%3A//pcwizz.net/librem13firstimpressions/</link>
+                <guid>https%3A//pcwizz.net/librem13firstimpressions/</guid>
+                <description>&lt;h2 id=&quot;packaging&quot;&gt;Packaging&lt;&#x2F;h2&gt;
+&lt;p&gt;Dull generic but adequate&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;look&quot;&gt;Look&lt;&#x2F;h2&gt;
+&lt;p&gt;Shiny, clean and nice.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;built-quality&quot;&gt;Built quality&lt;&#x2F;h2&gt;
+&lt;p&gt;Fairly good&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;keyboard&quot;&gt;Keyboard&lt;&#x2F;h2&gt;
+&lt;p&gt;Not what I&#x27;m used to but not problematic.&lt;&#x2F;p&gt;
+&lt;p&gt;There is a windows key!&lt;&#x2F;p&gt;
+&lt;p&gt;I don&#x27;t like the shortened right shift key to make room for a function modifier.
+Hopefully I cn remap the function modifier to something more useful.&lt;&#x2F;p&gt;
+&lt;p&gt;The function keys work as expected.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;kill-switches&quot;&gt;Kill switches&lt;&#x2F;h2&gt;
+&lt;p&gt;They aren&#x27;t labelled but there are only two so it&#x27;s not hard to figure out.
+Screen&lt;&#x2F;p&gt;
+&lt;p&gt;Would be perfect for the size however there is a bit of back light bleed on the
+bottom edge. The bleed is not awful and can only be seen on a blacked screen
+it&#x27;s not something that I can&#x27;t live with our would typically RMA when buying
+for personal use.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;trackpad&quot;&gt;Trackpad&lt;&#x2F;h2&gt;
+&lt;p&gt;I don&#x27;t like trackpads, this one is very big, they get in the way of me typing;
+there is a function key to turn it off. I&#x27;ll get used to it I guess.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;noise&quot;&gt;Noise&lt;&#x2F;h2&gt;
+&lt;p&gt;There is some noise from the air leaving the vents between the lid an the main
+body. it&#x27;s not very loud nor is it distracting; I only noticed it when in the
+quietest room in my house. If you have equipped it with a rust platter as I have
+then that will be your primary noise creator.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sound-and-speakers&quot;&gt;Sound and speakers&lt;&#x2F;h2&gt;
+&lt;p&gt;It works; it plays sound. I&#x27;m a bit of an audiophile I&#x27;m already invested in an
+amp&#x2F;dac and a nice pair of headphones so I don&#x27;t really care what is built in.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;wireless&quot;&gt;Wireless&lt;&#x2F;h2&gt;
+&lt;p&gt;It&#x27;s an Atheros chip fully supported by the ath9k driver as it stated on the
+campain page. Those of us who give a dam know what that means.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;boot&quot;&gt;Boot&lt;&#x2F;h2&gt;
+&lt;p&gt;Well it didn&#x27;t come with coreboot. I will be installing coreboot myself so I can
+have a grub payload required for &#x2F;boot to be encrypted.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pure-os&quot;&gt;Pure OS&lt;&#x2F;h2&gt;
+&lt;p&gt;Mine shipped with pure os not Qubes. In fact I believe mine shipped with RC2. I
+didn&#x27;t like it it didn&#x27;t seem to have any packages. I installed subgraph rather
+quickly after first boot.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

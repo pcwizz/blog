@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Pcwizz&#x27;s blog</title>
+        <link>https%3A//pcwizz.net</link>
+        <description>Nerd by the name of Pcwizz writes about DevOps, politics, and Free Software.</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https%3A//pcwizz.net/tags/laptops/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Fri, 18 Mar 2016 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>Inside the librem 13</title>
+                <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
+                <link>https%3A//pcwizz.net/insidethelibrem13/</link>
+                <guid>https%3A//pcwizz.net/insidethelibrem13/</guid>
+                <description>&lt;h2 id=&quot;disclaiming-bias&quot;&gt;Disclaiming bias&lt;&#x2F;h2&gt;
+&lt;p&gt;I have already taken the bottom my librem 13, as I like to act like the average
+prole, so I can give an initial report on the internal layout and wire runs.&lt;&#x2F;p&gt;
+&lt;p&gt;To be honest I took the bottom off to upgrade the memory and slot in an ssd, but
+I thought it might be some next level autism to write about it. I&#x27;m not really
+an expert on PCB design or laptop internal layouts, but I have taken lots of
+things apart.&lt;&#x2F;p&gt;
+&lt;p&gt;My favourite laptop for build quality is in fact my x200, as everything was
+covered in a plastic dust&#x2F;splash proof wrap, meaning everything had remained
+extremely clean despite it being many years old. I don&#x27;t really expect anything
+other than thinkpads to compare to the exceptional attention to detail found in
+the x200&lt;&#x2F;p&gt;
+&lt;p&gt;I did spend a couple of summers during college&#x2F;high school years churning out
+workstations and servers wich is also why I have an unhealthy obsession with
+cable ties, cable tension, bend radius and screw types. People very easily
+overlook important factors such as cable tension tending towards over taught
+cables that are both a pain in the ass to perform maintenance on and degrading
+to the cables lifespan. That said I have no formal training in the matter only
+habits I have contracted from fellow neckbeards or formulated myself.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;initial-inspection&quot;&gt;Initial inspection&lt;&#x2F;h2&gt;
+&lt;p&gt;It looks like pretty much any other modern laptop internal: A compact
+motherboard situated in the top left, a respectable battery tacking up the
+entirety of the palm rest, a single slot for sdram, a minipcie (populated with
+the wifi card), a 2.5&amp;quot; sata drive and an m.2 sata connector to the right. As you
+would expect of an i5 their is a fan positioned in the middle exhausting heat
+out of a rear vent from a thick copper heat pipe. The rear vent appears to be
+unfiltered and run right the way along the back of the case. The heatsink had a
+small block of what looks to be thermal transfer foam to utilize the metal
+bottom cover; the bottom of the laptop gets warm.&lt;&#x2F;p&gt;
+&lt;p&gt;There was a fair bit of that matt black tape in use to keep wires in place,
+mostly around the wifi module. It seems that some of the cable could have been
+made a little shorty for tidiness, but it might be better in the long term for
+maintenance. The wires for the cmos battery were not afflicted by the tape but
+had been looped affectionately round the connector in one elliptical coil; I
+dare not touch it for fear that it would never go down again.&lt;&#x2F;p&gt;
+&lt;p&gt;The screws attached the board to the case seemed to be small black painted
+screws. I didn&#x27;t look around closely for a ground other than the one for the
+wifi card which was a wire with the end trapped under a screw, not a screw one
+would ever have reason to remove so it&#x27;s fine with me.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;populating-the-m-2-sata&quot;&gt;Populating the M.2 sata&lt;&#x2F;h2&gt;
+&lt;p&gt;It&#x27;s a standard insert at 45 degrees then lower to horizontal and screw affair.
+The only niggle is that they don&#x27;t seem to populate the screw hole if you don&#x27;
+order it with a M.2 sata drive; I had to find my own screw.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;changing-the-ram&quot;&gt;Changing the RAM&lt;&#x2F;h2&gt;
+&lt;p&gt;They had put some kingston memory in there which is fine; I just wanted more
+than I had ordered with the machine. There is only a single dim slot that works
+in the way you think it does if you have changed ram in a laptop before. I went
+for a 1.35v dim I think that is what was in there I didn&#x27;t check.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>Librem 13 first impressions</title>
+                <pubDate>Thu, 17 Mar 2016 00:00:00 +0000</pubDate>
+                <link>https%3A//pcwizz.net/librem13firstimpressions/</link>
+                <guid>https%3A//pcwizz.net/librem13firstimpressions/</guid>
+                <description>&lt;h2 id=&quot;packaging&quot;&gt;Packaging&lt;&#x2F;h2&gt;
+&lt;p&gt;Dull generic but adequate&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;look&quot;&gt;Look&lt;&#x2F;h2&gt;
+&lt;p&gt;Shiny, clean and nice.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;built-quality&quot;&gt;Built quality&lt;&#x2F;h2&gt;
+&lt;p&gt;Fairly good&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;keyboard&quot;&gt;Keyboard&lt;&#x2F;h2&gt;
+&lt;p&gt;Not what I&#x27;m used to but not problematic.&lt;&#x2F;p&gt;
+&lt;p&gt;There is a windows key!&lt;&#x2F;p&gt;
+&lt;p&gt;I don&#x27;t like the shortened right shift key to make room for a function modifier.
+Hopefully I cn remap the function modifier to something more useful.&lt;&#x2F;p&gt;
+&lt;p&gt;The function keys work as expected.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;kill-switches&quot;&gt;Kill switches&lt;&#x2F;h2&gt;
+&lt;p&gt;They aren&#x27;t labelled but there are only two so it&#x27;s not hard to figure out.
+Screen&lt;&#x2F;p&gt;
+&lt;p&gt;Would be perfect for the size however there is a bit of back light bleed on the
+bottom edge. The bleed is not awful and can only be seen on a blacked screen
+it&#x27;s not something that I can&#x27;t live with our would typically RMA when buying
+for personal use.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;trackpad&quot;&gt;Trackpad&lt;&#x2F;h2&gt;
+&lt;p&gt;I don&#x27;t like trackpads, this one is very big, they get in the way of me typing;
+there is a function key to turn it off. I&#x27;ll get used to it I guess.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;noise&quot;&gt;Noise&lt;&#x2F;h2&gt;
+&lt;p&gt;There is some noise from the air leaving the vents between the lid an the main
+body. it&#x27;s not very loud nor is it distracting; I only noticed it when in the
+quietest room in my house. If you have equipped it with a rust platter as I have
+then that will be your primary noise creator.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sound-and-speakers&quot;&gt;Sound and speakers&lt;&#x2F;h2&gt;
+&lt;p&gt;It works; it plays sound. I&#x27;m a bit of an audiophile I&#x27;m already invested in an
+amp&#x2F;dac and a nice pair of headphones so I don&#x27;t really care what is built in.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;wireless&quot;&gt;Wireless&lt;&#x2F;h2&gt;
+&lt;p&gt;It&#x27;s an Atheros chip fully supported by the ath9k driver as it stated on the
+campain page. Those of us who give a dam know what that means.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;boot&quot;&gt;Boot&lt;&#x2F;h2&gt;
+&lt;p&gt;Well it didn&#x27;t come with coreboot. I will be installing coreboot myself so I can
+have a grub payload required for &#x2F;boot to be encrypted.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pure-os&quot;&gt;Pure OS&lt;&#x2F;h2&gt;
+&lt;p&gt;Mine shipped with pure os not Qubes. In fact I believe mine shipped with RC2. I
+didn&#x27;t like it it didn&#x27;t seem to have any packages. I installed subgraph rather
+quickly after first boot.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>
