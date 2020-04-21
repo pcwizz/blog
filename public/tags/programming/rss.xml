@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Pcwizz&#x27;s blog</title>
+        <link>https%3A//pcwizz.net</link>
+        <description>Nerd by the name of Pcwizz writes about DevOps, politics, and Free Software.</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https%3A//pcwizz.net/tags/programming/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 21 Apr 2020 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>Programming</title>
+                <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
+                <link>https%3A//pcwizz.net/programming/</link>
+                <guid>https%3A//pcwizz.net/programming/</guid>
+                <description>&lt;p&gt;The following content contains thoughts on programming mostly in Go and Rust.
+I make no claim on these thoughts being original or coherent.
+My hope is that this is somehow interesting.
+Enjoy!&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s start with why Go is a suboptimal language.
+Go is preferable to many other languages,
+but I increasingly find myself cursing its flaws.
+Go has great support for concurrency,
+on the one hand it gives your nice tools to do everything right,
+on other hand in lures developers into creating inordinately complex webs of
+channels and routines for what are essentially synchronous tasks.
+Error handling is explicit,
+which is an excellent reminder that unexpected things happen,
+however errors can be simply ignored with an &lt;code&gt;_&lt;&#x2F;code&gt; as they are merely convention.
+Go has one of the best garbage collectors implementations available,
+but there are still plenty of ways to introduce unsoundness in the language,
+not leaking is only part of the struggle.
+Interfaces are great,
+compose-able interfaces are better,
+implicitly implementing interfaces is insanity.
+Sometimes I just need Generics,
+or even just macros,
+instead Go gives me a templating library and go generate.&lt;&#x2F;p&gt;
+&lt;p&gt;Now that that venting is over with,
+it&#x27;s worth considering why Go is so popular despite the frustrations.
+The headline arguments are:
+it&#x27;s fast (relative to other GC&#x27;d languages),
+it&#x27;s a small languages (not so many incantations to remember),
+there is already a library for everything,
+it is established enough now that &amp;quot;enterprises&amp;quot; have caught up.
+The honest answers are:
+Go routines sound cool,
+managers have hear of it,
+the tool chain isn&#x27;t massive pain to setup.&lt;&#x2F;p&gt;
+&lt;p&gt;What do I actually care about when programming?
+I don&#x27;t care so much about performance,
+at least not at first,
+because that is premature optimisation.
+I&#x27;m not that bothered about syntax,
+as long as my editor has good language integration.
+What I really want to know is:
+can I build a mental model of what is going on without loosing my mind,
+are there ergonomic ways to do common things,
+will the code fail quietly at runtime.
+That last thing especially,
+I can live with pretty much anything,
+but if it as obscure runtime behaviours I&#x27;m more likely to resent that tool.&lt;&#x2F;p&gt;
+&lt;p&gt;Programs should fail early and loudly,
+preferably before I&#x27;ve left my editor,
+hopefully on build,
+and almost never in production.
+When Rust berates me for trying to do something unsound I thank it,
+by nagging me at build time it has saved me production debugging stress,
+hours invested fighting the borrow checker are worth every second.
+With Go the feedback is often a bit more delayed,
+waiting for unit tests or even integration tests before showing strangeness,
+of course it being Go many bugs are racy (-race doesn&#x27;t catch everything).
+Well at lease compiled languages are a step up from interpreted languages,
+days spent attaching IRB to poorly maintained Ruby apps are best avoided,
+interactive debuggers (Delve, rust-lldb) are more than enough.&lt;&#x2F;p&gt;
+&lt;p&gt;Code should be in declarative style,
+imperative code is reserved for edge cases.
+Rust strikes a nice balance,
+most thinks can be down very clearly declaratively,
+while I still have the option to write imperative code as required.
+Objects should be immutable by default,
+having to say I want this to be mutable encourages good design,
+most of the time readability is a higher priority than performance.
+Unit tests should be extensive,
+most dumb manual checks done during development should become an automated test,
+it save you time, me time, and makes the test gods happier.&lt;&#x2F;p&gt;
+&lt;p&gt;Software these days rarely exists in isolation,
+integration test everything exhaustively,
+or prepare for a game of debugging in production.
+Staging environments are not integration tests,
+staging is where you hope to catch holes in your tests.
+If tests &amp;quot;take to long&amp;quot; your development process is probably broken,
+otherwise think about parallelising tests.&lt;&#x2F;p&gt;
+&lt;p&gt;This concludes my jumble of thoughts for the moment.
+Happy hacking!&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

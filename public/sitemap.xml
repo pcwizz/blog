@@ -33,6 +33,13 @@
         </url>
     
         <url>
+            <loc>https%3A//pcwizz.net/programming/</loc>
+            
+                <lastmod>2020-04-21</lastmod>
+            
+        </url>
+    
+        <url>
             <loc>https%3A//pcwizz.net/tags/</loc>
             
         </url>
@@ -79,6 +86,11 @@
     
         <url>
             <loc>https%3A//pcwizz.net/tags/mutt/</loc>
+            
+        </url>
+    
+        <url>
+            <loc>https%3A//pcwizz.net/tags/programming/</loc>
             
         </url>
     
