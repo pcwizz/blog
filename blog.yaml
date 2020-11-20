@@ -49,3 +49,19 @@ spec:
       - backend:
           serviceName: blog
           servicePort: 80
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: blog-tls
+spec:
+  secretName: blog-tls
+  duration: 2160h
+  renewBefore: 360h
+  usages:
+    - server auth
+  dnsNames:
+  - pcwizz.net
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
