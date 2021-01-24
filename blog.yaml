@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: blog-nginx
-        image: pcwizz/blog:latest
+        image: pcwizz/blog:42
         imagePullPolicy: "Always"
         ports:
         - containerPort: 80
