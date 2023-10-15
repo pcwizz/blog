@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://pcwizz.net"
 title = "Pcwizz's blog"
-description = "Nerd by the name of Pcwizz writes about DevOps, politics, and Free Software."
+description = "Pcwizz (AKA Morgan Hill) makes occasional posts about technical topics"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -13,7 +13,7 @@ highlight_code = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-theme= "after-dark"
+theme = "after-dark"
 
 taxonomies = [
 	{name = "tags", rss = true},
@@ -26,5 +26,6 @@ after_dark_menu = [
 	{url = "/", name = "Home"},
 	{url = "/tags", name = "Tags"},
 	{url = "https://github.com/pcwizz", name = "Github"},
-	{url = "https://twitter.com/pcwizz", name = "Twitter"},
+	{url = "https://infosec.exchange/@pcwizz", name = "Mastodon"},
+	{url = "https://morganrhill.com", name = "About me"},
 ]
