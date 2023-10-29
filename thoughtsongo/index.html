@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      
+      <meta name="description" content="Pcwizz (AKA Morgan Hill) makes occasional posts about technical topics" />
+      
+    
+
+      <title>Pcwizz&#x27;s blog</title>
+
+      
+
+      
+          <link rel="stylesheet" href="https://pcwizz.net/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="/">
+                                <span itemprop="name">Home</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="/tags">
+                                <span itemprop="name">Tags</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://github.com/pcwizz">
+                                <span itemprop="name">Github</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://infosec.exchange/@pcwizz">
+                                <span itemprop="name">Mastodon</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://morganrhill.com">
+                                <span itemprop="name">About me</span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">Thoughts on Go</h1>
+        <span class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>3 minute read</span>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
+    Published: 2020-12-04
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <p>I was going to write a wall of text but that isn't really my thing so I'll just
+present you with the points I wanted to share. Go is a practical languages I
+enjoy using most days, although like everything crafted by the hands of humanity
+it has imperfections.  Many of the thoughts listed here are made up for by the
+community, proper code reviews, and additional tooling. Just keep in mind that
+many developers work in Go without knowing/about (or wanting to know about) the
+community, and therefor get lead astray by Go in the course of getting their job
+done.</p>
+<ul>
+<li><code>interface{}</code>
+<ul>
+<li>Negatives
+<ul>
+<li>Runtime type checking is expensive</li>
+<li>Runtime type checking pushes failures into runtime</li>
+<li>Makes function signitures less descriptive</li>
+</ul>
+</li>
+<li>Thoughts
+<ul>
+<li>Generics are one option but they aren't required</li>
+<li>Code generation is already part of Go
+<ul>
+<li>Template Go code and generate for concrete types</li>
+<li>Faster than calling reflect in a parser</li>
+<li>Most use cases don't deal with unknown structures</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Error handling
+<ul>
+<li>The language is the fine the standard library error interface is lacking</li>
+<li>Errors are recoverable and normal
+<ul>
+<li>Matching strings is slow</li>
+<li>Matching strings is brittle</li>
+<li>Standard error interface is comonly returned not a conrete error type
+<ul>
+<li>A superset interface would also achieve the same thing
+<ul>
+<li>Work arround lack enums with private types and a public interface</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Panics are for wen the safest thing to do is stop everything
+<ul>
+<li>The aility to reover panics leads developers in the wrong direction</li>
+<li>Recovering a panic requires switching on a <code>interface{}</code></li>
+<li>Panics are handled by the OS/container scheduluers restarting the process</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Implicit interface implementation
+<ul>
+<li>Negatives
+<ul>
+<li>Hard to navigate</li>
+<li>Forces developers to read/remember the interface definition</li>
+<li>Non intentional and misleading implementaiton</li>
+</ul>
+</li>
+<li>Thoughts
+<ul>
+<li>Should be easy to get a list of types that implement an interface</li>
+<li>Developers should be able to user an interface without knowing its methods
+<ul>
+<li>i.e. know that they need a <code>Reader</code>from Y to pass to X</li>
+</ul>
+</li>
+<li>The shape might fit but the context can be completly different</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Concurrency model
+<ul>
+<li>Negatives
+<ul>
+<li>Go routines make it extremely easy to burn CPU doing nothing</li>
+<li>Channels make code harder to read</li>
+<li>Channels and Go routines are abused horribly in most codebases</li>
+<li>Cancelation of routines is an unreliable horror show</li>
+</ul>
+</li>
+<li>Thoughts
+<ul>
+<li>Go routines aren't lazy they run even if not doing anything</li>
+<li>Folloing a stack of function calls is much easier than folling a channel</li>
+<li>Most channels yeild one item then close
+<ul>
+<li>That is better described as a future/promise</li>
+</ul>
+</li>
+<li>A handle should probalby be returned when a go routine is created
+<ul>
+<li>Passing in context and selecting on the canelation channel is fragile</li>
+<li>Write busness logic not cancelation boiler plate</li>
+<li>Interupt routine between any line, call defered calls exit</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                    Published by Pcwizz
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://pcwizz.net/tags/go/">Go</a>
+                        
+                            
+                                
+                                    and
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/programming/">programming</a>
+                        
+                            
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+</html>
