@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      
+      <meta name="description" content="Pcwizz (AKA Morgan Hill) makes occasional posts about technical topics" />
+      
+    
+
+      <title>Pcwizz&#x27;s blog</title>
+
+      
+
+      
+          <link rel="stylesheet" href="https://pcwizz.net/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="/">
+                                <span itemprop="name">Home</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="/tags">
+                                <span itemprop="name">Tags</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://github.com/pcwizz">
+                                <span itemprop="name">Github</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://infosec.exchange/@pcwizz">
+                                <span itemprop="name">Mastodon</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://morganrhill.com">
+                                <span itemprop="name">About me</span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">Inside the librem 13</h1>
+        <span class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>4 minute read</span>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
+    Published: 2016-03-18
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <h2 id="disclaiming-bias">Disclaiming bias</h2>
+<p>I have already taken the bottom my librem 13, as I like to act like the average
+prole, so I can give an initial report on the internal layout and wire runs.</p>
+<p>To be honest I took the bottom off to upgrade the memory and slot in an ssd, but
+I thought it might be some next level autism to write about it. I'm not really
+an expert on PCB design or laptop internal layouts, but I have taken lots of
+things apart.</p>
+<p>My favourite laptop for build quality is in fact my x200, as everything was
+covered in a plastic dust/splash proof wrap, meaning everything had remained
+extremely clean despite it being many years old. I don't really expect anything
+other than thinkpads to compare to the exceptional attention to detail found in
+the x200</p>
+<p>I did spend a couple of summers during college/high school years churning out
+workstations and servers wich is also why I have an unhealthy obsession with
+cable ties, cable tension, bend radius and screw types. People very easily
+overlook important factors such as cable tension tending towards over taught
+cables that are both a pain in the ass to perform maintenance on and degrading
+to the cables lifespan. That said I have no formal training in the matter only
+habits I have contracted from fellow neckbeards or formulated myself.</p>
+<h2 id="initial-inspection">Initial inspection</h2>
+<p>It looks like pretty much any other modern laptop internal: A compact
+motherboard situated in the top left, a respectable battery tacking up the
+entirety of the palm rest, a single slot for sdram, a minipcie (populated with
+the wifi card), a 2.5&quot; sata drive and an m.2 sata connector to the right. As you
+would expect of an i5 their is a fan positioned in the middle exhausting heat
+out of a rear vent from a thick copper heat pipe. The rear vent appears to be
+unfiltered and run right the way along the back of the case. The heatsink had a
+small block of what looks to be thermal transfer foam to utilize the metal
+bottom cover; the bottom of the laptop gets warm.</p>
+<p>There was a fair bit of that matt black tape in use to keep wires in place,
+mostly around the wifi module. It seems that some of the cable could have been
+made a little shorty for tidiness, but it might be better in the long term for
+maintenance. The wires for the cmos battery were not afflicted by the tape but
+had been looped affectionately round the connector in one elliptical coil; I
+dare not touch it for fear that it would never go down again.</p>
+<p>The screws attached the board to the case seemed to be small black painted
+screws. I didn't look around closely for a ground other than the one for the
+wifi card which was a wire with the end trapped under a screw, not a screw one
+would ever have reason to remove so it's fine with me.</p>
+<h2 id="populating-the-m-2-sata">Populating the M.2 sata</h2>
+<p>It's a standard insert at 45 degrees then lower to horizontal and screw affair.
+The only niggle is that they don't seem to populate the screw hole if you don'
+order it with a M.2 sata drive; I had to find my own screw.</p>
+<h2 id="changing-the-ram">Changing the RAM</h2>
+<p>They had put some kingston memory in there which is fine; I just wanted more
+than I had ordered with the machine. There is only a single dim slot that works
+in the way you think it does if you have changed ram in a laptop before. I went
+for a 1.35v dim I think that is what was in there I didn't check.</p>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                    Published by Pcwizz
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://pcwizz.net/tags/hardware/">hardware</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/laptops/">laptops</a>
+                        
+                            
+                                
+                                    and
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/purism/">purism</a>
+                        
+                            
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+</html>

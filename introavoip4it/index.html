@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      
+      <meta name="description" content="Pcwizz (AKA Morgan Hill) makes occasional posts about technical topics" />
+      
+    
+
+      <title>Pcwizz&#x27;s blog</title>
+
+      
+
+      
+          <link rel="stylesheet" href="https://pcwizz.net/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="/">
+                                <span itemprop="name">Home</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="/tags">
+                                <span itemprop="name">Tags</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://github.com/pcwizz">
+                                <span itemprop="name">Github</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://infosec.exchange/@pcwizz">
+                                <span itemprop="name">Mastodon</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://morganrhill.com">
+                                <span itemprop="name">About me</span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">Introduction to AV over IP for IT Professionals</h1>
+        <span class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>7 minute read</span>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
+    Published: 2023-10-29
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <p>While numerous introductions to AV over IP exist for individuals within the AV industry, there is a scarcity of resources tailored for regular IT professionals. As AV over IP is deployed in more and more environments it comes into contact with the broader IT community. With broader adoption comes a need for IT professionals to understand AV.  In this post I aim to define AV over IP and provide a brief background on this topic.</p>
+<h2 id="what-is-av">What is AV?</h2>
+<p>AV typically refers to Audio and Video. For the purpose of this discussion, I also include lighting, rigging, and other systems commonly associated with audio and video setups.</p>
+<h2 id="where-is-av-used">Where is AV Used?</h2>
+<p>AV technology is pervasive in the modern world, finding application in various settings such as:</p>
+<ul>
+<li>Theatres</li>
+<li>Concerts</li>
+<li>Conferences</li>
+<li>Broadcasters</li>
+<li>Houses of Worship</li>
+<li>Airports</li>
+<li>Train stations</li>
+</ul>
+<p>Surprisingly, there is a technological overlap among all these diverse locations.</p>
+<h2 id="how-did-av-work-before-ip">How did AV work before IP?</h2>
+<p>Previously, each element operated on its own independent system, often with its
+unique cabling and idiosyncrasies.</p>
+<p>Audio was transmitted as analogue signals over XRL, eventually transitioning to
+digital through AES3 and various other proprietary vendor-specific protocols,
+some of which happened to use Ethernet cables but did not communicate using
+Ethernet. Microphones and other audio sources were connected to stage boxes,
+which were then linked to the mixing console. The mixing console provided the
+control plane for the operator, who then routed the signals to the speakers
+through amplifiers.</p>
+<p>Video was transmitted over SDI, HDMI, and HDBaseT, with the latter effectively
+functioning as HDMI over Ethernet cables but not as Ethernet. Notably, HDMI and
+HDBaseT allowed for the tunneling of Ethernet and USB, enabling the possibility
+of IP over AV. Specialized video switcher hardware interacted with a video
+mixing console.</p>
+<p>Lighting, rigging, and related systems used DMX512, which could be
+daisy-chained from a lighting desk or, at times, a laptop to various nodes
+(such as lights, fog machines, winches, etc.). Each daisy chain represented a
+universe with 512 channels, quickly consumed by separate color channels like
+red, green, blue, pan, and tilt. Consequently, typical lighting desks supported
+multiple universes. Although DMX had its dedicated cables, there was also a
+standard for utilizing Ethernet cables.</p>
+<h2 id="why-use-ip-for-av">Why Use IP for AV?</h2>
+<p>Dealing with different types of cables posed significant challenges, leading
+even non-IP-based AV technologies to incorporate alternative wiring, such as
+cat5e. The ability to use cat5e also meant leveraging existing venue cabling or
+deploying future-proof cabling, even if the specific usage was unclear at the
+time.</p>
+<p>Moreover, the issue of distance was resolved in non-IP AV through media
+converters, facilitating the transition from, for instance, SDI to fiber.</p>
+<p>An inherent pain point uniquely addressed by IP for AV (apart from passive
+optical solutions) was the multiplexing of multiple elements over the same
+infrastructure. With IP, audio, video, and lighting signals could all be
+transmitted over a single cable, eliminating the need for additional wiring.</p>
+<p>One of the standout features of IP for AV was its extensibility and
+flexibility. The network topology could be adapted to suit the venue and the
+specific requirements of the event. Granting access to audio streams for
+various engineers, such as monitoring, front of house, and broadcast engineers,
+was as straightforward as providing them with subscription access to the
+streams on the network.</p>
+<p>IP also introduced the ability to route data. While some Ethernet (L2) based AV
+solutions could be switched, the option for routing was especially valuable for
+larger deployments.</p>
+<h2 id="general-approach-of-av-over-ip-avoip">General Approach of AV over IP (AVoIP)</h2>
+<p>Open vendor interoperable standards for audio, video, and lighting over IP
+extensively utilized multicast. Multicast not only reduced bandwidth usage on
+links, thus cutting costs, but also decentralized the responsibility of
+accessing multimedia data across the network. This approach transformed the IP
+network into an AV routing matrix, a function previously relegated to separate
+devices.</p>
+<p>By leveraging the power of multicast, AVoIP solutions enabled efficient
+distribution of multimedia data across the network, facilitating seamless
+communication and collaboration between various AV devices. The shift towards
+using the IP network as an AV routing matrix marked a significant evolution in
+the field, simplifying the overall AV infrastructure and operation. The
+evolution of AV technology represents a departure from the traditional IT
+comfort zone when it comes to network design and usage.</p>
+<p>Many IT professionals instinctively lean towards minimizing multicast traffic.
+Over decades, conventional IT practices have favoured centralized unicast
+solutions due to their ease of management, debugging, and security. In a
+typical network environment, anything that relies on multicast is often
+perceived as an inconvenience, leading administrators to block anything beyond
+the essentials, such as DHCP, in order to avoid potential complications.
+Dealing with misbehaving devices flooding the network with broadcast or 'local
+multicast' is far from ideal. As a result, it's common practice to block
+consumer-focused technologies like mDNS within office networks, further
+reducing network noise and complexity.</p>
+<p>Given this context, it's hardly surprising that there's a substantial lack of
+observability, manageability, and security when it comes to multicast. For
+those who expect encryption and authentication in AV over IP, it's important to
+note that these features are still in the discussion stage. Since the AV
+industry is one of the rare sectors where multicast serves a legitimate
+purpose, it falls upon the industry to drive the maturation of multicast
+technology, bridging the gap to unicast protocols in terms of security and
+reliability.</p>
+<h2 id="how-the-av-industry-operates">How the AV industry operates?</h2>
+<p>The disparity in networking capabilities goes beyond the technical realm,
+encompassing cultural and knowledge gaps that have significant implications.</p>
+<p>In many theatres and live performance spaces, the absence of dedicated IT
+personnel is a common reality. In cases where an IT professional is present,
+their responsibilities typically revolve around tasks like managing Wi-Fi
+networks and printers for the box office.</p>
+<p>The individuals tasked with constructing networks in liver performance spaces
+are often AV technicians. Their primary objective is to establish a functional
+and reliable system that operates seamlessly, with minimal need for further
+attention. Consequently, the training AV technicians receive in networking is
+often tailored to the specific requirements of creating a minimal functional
+setup. For them, the network serves as a tool to facilitate their core
+responsibilities, such as managing lighting, sound, or video production.</p>
+<p>In the broadcast sector, while there is typically a greater abundance of
+resources, the regulatory environment and the intricate corporate structures of
+most broadcasting companies necessitate meticulous long-term planning for any
+technological changes. The repercussions of downtime, potential fines, license
+revocation, and loss of advertising revenue compel broadcasters to adopt a
+cautious approach to technology transformation.</p>
+<p>To mitigate these risks, engineers within broadcasting organizations undergo
+extensive training to master specific technology stacks, often navigating their
+entire careers within a single technological framework. While broadcasters do
+maintain dedicated IT and security teams, the risk assessment typically leans
+heavily toward maintaining the status quo to ensure operational stability.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The AV industry has discovered innovative ways to utilize IP technology to
+fulfill its specific requirements, and this trend is expected to persist and
+evolve further. However, there are developmental gaps that we, as IT
+professionals, have previously encountered in other contexts, presenting an
+opportunity for us to contribute our expertise and guide the AV industry toward
+the right path. While addressing these gaps may require a significant time
+investment, it is essential that we explore temporary mitigations that do not
+disrupt current operations.</p>
+<p>Moving forward I’m going to continue sharing my thoughts and trying to get in
+contact with the standards setting bodies (e.g. IPMX, SMTPE, AES). If you have
+some thoughts or contacts to share  please reach out.</p>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                    Published by Pcwizz
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://pcwizz.net/tags/avoip/">AVoIP</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/broadcast/">broadcast</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/multicast/">multicast</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/aes67/">AES67</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/smtpe-2110/">SMTPE 2110</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/art-net/">Art-Net</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/security/">security</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/networking/">networking</a>
+                        
+                            
+                                
+                                    ,
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/ipmx/">IPMX</a>
+                        
+                            
+                                
+                                    and
+                                
+                            
+                        
+                    
+                        <a href="https://pcwizz.net/tags/proav/">ProAV</a>
+                        
+                            
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+</html>
